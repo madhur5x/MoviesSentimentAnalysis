@@ -1,0 +1,27 @@
+Input Data (max_len)
+     |
+     v
++------------------------+
+|    Embedding Layer      |
+|  Input: max_features    |
+|  Output: 128-dim vector |
++------------------------+
+     |
+     v
++------------------------+
+|    Simple RNN Layer     |
+|   Input: 128-dim vector |
+|  Output: 128 units      |
+|  Activation: ReLU       |
++------------------------+
+     |
+     v
++------------------------+
+|    Dense Layer          |
+|   Input: 128 units      |
+|  Output: 1 unit         |
+|  Activation: Sigmoid    |
++------------------------+
+     |
+     v
+ Output (Probability)
