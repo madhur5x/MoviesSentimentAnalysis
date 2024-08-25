@@ -46,7 +46,7 @@ if st.button('Classify'):
     sentiment ='Positive' if prediction[0][0] > 0.6  else 'Negative'
     
 ## displaying the result in streamlit app
-    st.write(f'It's a {sentiment} review')
+    st.write(f"It's a {sentiment} review")
     st.write(f'prediction score:{prediction[0][0]}')
 else:
     st.write('Tell me how was the movie!!! .')
