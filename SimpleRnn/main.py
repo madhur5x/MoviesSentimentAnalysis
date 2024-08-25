@@ -32,25 +32,24 @@ def preprocess_text(text):
 import streamlit as st
 ### designing STREAMLIT app
 st.title('Movie Sentiments Anaslysis')
-st.write('Enter a movie review to classify it as a positive and negitive.')
+st.write('Enter A Movie review to classify it as a positive and negitive.')
 
 ## user input
-user_input =st.text_area('Movie Review')
+user_input = st.text_area('Movie Review')
 
-if st.button('classify'):
+if st.button('Classify'):
     preprocessed_input=preprocess_text(user_input)
     
 ## make prediction in app
 
     prediction=model.predict(preprocessed_input)
-    sentiment ='Positive' if prediction[0][0]>0.5 else'Negative'
+    sentiment ='Positive' if prediction[0][0] > 0.6  else 'Negative'
     
 ## displaying the result in streamlit app
-    st.write(f'{sentiment} a review')
+    st.write(f'It's a {sentiment} review')
     st.write(f'prediction score:{prediction[0][0]}')
-    
 else:
-    st.write('please enter a movie review.')
+    st.write('Tell me how was the movie!!! .')
 
              
     
